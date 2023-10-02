@@ -7,6 +7,7 @@ const apiLink = 'https://api.spacexdata.com/v3/missions';
 export const getMissionsData = createAsyncThunk('missions/getMissionsData', async (thunkAPI) => {
   try {
     const response = await axios.get(apiLink);
+    console.log(response.data);
     return response.data;
   } catch (error) {
     return thunkAPI.rejectWithValue(error.message);
@@ -16,7 +17,7 @@ export const getMissionsData = createAsyncThunk('missions/getMissionsData', asyn
 const missionsSlice = createSlice({
   name: 'missions',
   initialState: {
-    missionsArr: [],
+    missions: [],
     isLoading: false,
     error: null,
   },
@@ -28,7 +29,7 @@ const missionsSlice = createSlice({
       })
       .addCase(getMissionsData.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.rocketArr = action.payload.map((mission) => ({
+        state.missions = action.payload.map((mission) => ({
           mission_id: mission.mission_id,
           mission_name: mission.mission_name,
           description: mission.description,
