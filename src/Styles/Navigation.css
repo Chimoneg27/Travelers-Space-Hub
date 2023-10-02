@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure: #0077b6;
+  --powder-blue: #2ea8d1;
+  --sky-blue: #206fdf;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  width: 20%;
+  color: var(--azure);
+}
+
+.items li {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.noactive-link {
+  color: var(--powder-blue);
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+.active {
+  color: var(--sky-blue);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
