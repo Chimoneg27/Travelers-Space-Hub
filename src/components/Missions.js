@@ -2,7 +2,6 @@ import '../Styles/Missions.css';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissionsData } from '../Redux/Missions/missionsSlice';
-import Navigation from './Navigation';
 import Mission from './Mission';
 
 const Missions = () => {
@@ -20,22 +19,21 @@ const Missions = () => {
 
   return (
     <div className="mission-page">
-      <Navigation />
       <table className="missionTable">
         <thead className="missionThead">
-          <th>
+          <th width="10%">
             <h3>Mision</h3>
           </th>
 
-          <th>
+          <th width="65%">
             <h3>Description</h3>
           </th>
 
-          <th>
+          <th width="12.5%">
             <h3>Status</h3>
           </th>
-          <th>
-            1
+          <th width="12.5%">
+            {' '}
           </th>
         </thead>
 
