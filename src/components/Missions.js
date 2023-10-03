@@ -1,15 +1,16 @@
+import '../Styles/Missions.css';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissionsData } from '../Redux/Missions/missionsSlice';
 import Navigation from './Navigation';
+import Mission from './Mission';
 
 const Missions = () => {
   const { isLoading, error, missions } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(getMissionsData());
-  }, [dispatch]);
+  }, []);
   if (isLoading) {
     return <div>loading...</div>;
   }
@@ -20,18 +21,41 @@ const Missions = () => {
   return (
     <div className="mission-page">
       <Navigation />
-      <div className="mission-list">
-        {
-          missions.map((mission) => (
-            <div key={mission.mission_id}>
-              <div style={{ color: 'blue' }}>{mission.mission_id}</div>
-              <div>{mission.mission_name}</div>
-              <div>{mission.description}</div>
+      <table className="missionTable">
+        <thead className="missionThead">
+          <th>
+            <h3>Mision</h3>
+          </th>
 
-            </div>
+          <th>
+            <h3>Description</h3>
+          </th>
+
+          <th>
+            <h3>Status</h3>
+          </th>
+          <th>
+            1
+          </th>
+        </thead>
+
+        <tbody>
+          {
+
+          missions.map((mission) => (
+            <Mission
+              key={mission.mission_id}
+              mission_id={mission.mission_id}
+              mission_name={mission.mission_name}
+              description={mission.description}
+              mission_join={mission.mission_join}
+            />
           ))
+
         }
-      </div>
+
+        </tbody>
+      </table>
     </div>
   );
 };
