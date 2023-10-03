@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getRocketData } from '../Redux/Rockets/rocketsSlice';
 import RocketRender from './RocketRender';
-import Navigation from './Navigation';
-import '../Styles/RocketsRender.css';
 
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets.rocketArr);
@@ -19,7 +17,6 @@ const Rockets = () => {
 
   return (
     <div className="rocket-page">
-      <Navigation />
       {isLoading ? (
         <h2>Loading...</h2>
       ) : (
