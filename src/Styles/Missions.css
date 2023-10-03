@@ -1,0 +1,21 @@
+.missionTable{
+  width: 100%;
+  border-collapse: collapse;
+}
+.missionTable, td, th {
+    border: 1px solid;
+  }
+  .missionTable td, .missionTable th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .missionTable tr:nth-child(odd){background-color: #f2f2f2;}
+   
+ .leave-mission{
+    width: 2rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: 1px solid red;
+    color: red;
+}
