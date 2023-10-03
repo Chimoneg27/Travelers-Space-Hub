@@ -15,21 +15,34 @@ const rocketReducer = createSlice({
     rocketArr: [],
     isLoading: false,
     error: null,
+    isDataFetched: false,
   },
-  reducers: {},
+  reducers: {
+    addReservation: (state, action) => {
+      const updatedRocketArr = state.rocketArr.map((rocketObj) => (rocketObj.id === action.payload
+        ? { ...rocketObj, reserved: false } : rocketObj));
+      return { ...state, rocketArr: updatedRocketArr };
+    },
+    cancelReservation: (state, action) => {
+      const updatedRocketArr = state.rocketArr.map((rocketObj) => (rocketObj.id === action.payload
+        ? { ...rocketObj, reserved: true } : rocketObj));
+      return { ...state, rocketArr: updatedRocketArr };
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getRocketData.pending, (state) => {
-        state.isLoading = false;
+        state.isLoading = true;
       })
       .addCase(getRocketData.fulfilled, (state, action) => {
         state.isLoading = false;
         state.rocketArr = action.payload.map((rocket) => ({
           id: rocket.id,
           name: rocket.name,
-          type: rocket.type,
           flickr_images: rocket.flickr_images,
+          description: rocket.description,
         }));
+        state.isDataFetched = true;
       })
       .addCase(getRocketData.rejected, (state, action) => {
         state.isLoading = false;
@@ -38,4 +51,5 @@ const rocketReducer = createSlice({
   },
 });
 
+export const { cancelReservation, addReservation } = rocketReducer.actions;
 export default rocketReducer.reducer;
