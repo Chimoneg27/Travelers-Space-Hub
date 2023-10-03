@@ -1,11 +1,39 @@
-import React from 'react';
-// import Navigation from './Navigation';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getRocketData } from '../Redux/Rockets/rocketsSlice';
+import RocketRender from './RocketRender';
+import Navigation from './Navigation';
+import '../Styles/RocketsRender.css';
 
-const Rockets = () => (
-  <div className="rocket-page">
-    {/* <Navigation /> */}
-    <h1>Rockets</h1>
-  </div>
-);
+const Rockets = () => {
+  const rockets = useSelector((state) => state.rockets.rocketArr);
+  const isLoading = useSelector((state) => state.rockets.isLoading);
+  const dataFetched = useSelector((state) => state.rockets.isDataFetched);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!dataFetched) {
+      dispatch(getRocketData());
+    }
+  }, [dispatch, dataFetched]);
+
+  return (
+    <div className="rocket-page">
+      <Navigation />
+      {isLoading ? (
+        <h2>Loading...</h2>
+      ) : (
+        <div className="rocket-container">
+          {rockets.map((rocket) => (
+            <RocketRender
+              key={rocket.id}
+              rocket={rocket}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 export default Rockets;

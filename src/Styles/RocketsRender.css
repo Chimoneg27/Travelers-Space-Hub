@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure: #0077b6;
+  --powder-blue: #2ea8d1;
+  --sky-blue: #206fdf;
+  --gray: #e2e2e2;
+  --font-gray: #4a4a4a;
+}
+
+.rocket-container {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin: 1rem auto;
+  width: 95%;
+  border-top: 2px solid var(--gray);
+}
+
+.RocketHolder {
+  width: 95%;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.rocket-img {
+  width: 15.125rem;
+}
+
+.rocket-info {
+  width: 75%;
+}
+
+.rocket-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.rocket-info p {
+  font-size: 1rem;
+  line-height: 1.45rem;
+}
+
+.rocket-info button {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.reserve-btn {
+  background-color: var(--sky-blue);
+  color: white;
+  border: none;
+}
+
+.cancel-btn {
+  font-weight: 600;
+  background-color: white;
+  color: var(--font-gray);
+  border: 1px solid var(--gray);
+}
+
+.Badge {
+  padding: 0.15rem;
+  background-color: var(--powder-blue);
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  margin: 0.75rem 0.75rem 1rem 0;
+}
