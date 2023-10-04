@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test Navigation should Navigation all links 1`] = `<body />`;
+
+exports[`Test Navigation should Navigation all links 2`] = `[Function]`;
