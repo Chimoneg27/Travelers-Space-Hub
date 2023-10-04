@@ -54,6 +54,7 @@ const missionsSlice = createSlice({
           description: mission.description,
           mission_join: false,
         }));
+        state.isLoading = true;
       })
       .addCase(getMissionsData.rejected, (state, action) => {
         state.isLoading = false;
