@@ -36,9 +36,10 @@ th {
 
 .missionTable tr:nth-child(odd) { background-color: #f2f2f2; }
 
-.missionTable th{
+.missionTable th {
   background-color: white;
 }
+
 .active-member {
   background-color: #18a2b8;
   color: white;
@@ -90,4 +91,3 @@ th {
   padding: 1rem;
   border: 1px solid gray;
 }
-
