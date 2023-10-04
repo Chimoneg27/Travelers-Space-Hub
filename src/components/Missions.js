@@ -9,7 +9,7 @@ const Missions = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     if (!isLoading) dispatch(getMissionsData());
-  }, [dispatch]);
+  }, [dispatch, isLoading]);
 
   if (!isLoading) {
     return <div>loading...</div>;

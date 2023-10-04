@@ -10,6 +10,7 @@
   --azure: #0077b6;
   --powder-blue: #2ea8d1;
   --sky-blue: #206fdf;
+  --gray: #e2e2e2;
 }
 
 .navigation {
@@ -61,4 +62,11 @@
   color: var(--sky-blue);
   border-bottom-width: 1px;
   border-bottom-style: solid;
+}
+
+.line {
+  width: 95%;
+  height: 3px;
+  background-color: var(--gray);
+  margin: 0 auto 1rem auto;
 }
