@@ -33,7 +33,7 @@ test('renders missions component correctly', async () => {
       <Missions />
     </Provider>
   );
-  const {getText}= render(<Misions />);
+  const { getText } = render(<Misions />);
   expect(getText).toMatchSnapshot();
   expect(screen.getByText('Mission1')).toBeInTheDocument();
   expect(screen.getByText('Mission2')).toBeInTheDocument();
