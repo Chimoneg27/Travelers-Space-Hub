@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test My Profile page Check if the component has changed 1`] = `
+<div
+  className="my-profile-page"
+>
+  <div
+    className="missions-sec"
+  >
+    <h2>
+      My Missions
+    </h2>
+  </div>
+  <div
+    className="rockets-sec"
+  >
+    <h2>
+      My Rockets
+    </h2>
+    <div
+      className="Rocket-Profile"
+    />
+  </div>
+</div>
+`;

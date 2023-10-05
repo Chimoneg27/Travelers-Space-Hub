@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azure: #0077b6;
+  --powder-blue: #2ea8d1;
+  --sky-blue: #206fdf;
+  --gray: #e2e2e2;
+}
+
+.navigation {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Logo img {
+  width: 4rem;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  width: 24%;
+  padding: 0.15rem;
+  color: var(--azure);
+}
+
+.items li {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.items li:last-child {
+  border-left: 2px solid black;
+  padding-left: 1rem;
+}
+
+.noactive-link {
+  color: var(--powder-blue);
+  text-decoration: none;
+}
+
+.active {
+  color: var(--sky-blue);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.line {
+  width: 97%;
+  height: 3px;
+  background-color: var(--gray);
+  margin: 0 auto 1rem auto;
+}

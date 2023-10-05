@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check RocketRender 1`] = `
+<div
+  className="rocket-page"
+>
+  <div
+    className="rocket-container"
+  >
+    <div
+      className="RocketHolder"
+    >
+      <img
+        alt="Rocket1"
+        className="rocket-img"
+        src="image1"
+      />
+      <div
+        className="rocket-info"
+      >
+        <h3>
+          Rocket1
+        </h3>
+        <p>
+          <span />
+          Description1
+        </p>
+        <div>
+          <button
+            className="reserve-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Reserve Rocket
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="RocketHolder"
+    >
+      <img
+        alt="Rocket2"
+        className="rocket-img"
+        src="image2"
+      />
+      <div
+        className="rocket-info"
+      >
+        <h3>
+          Rocket2
+        </h3>
+        <p>
+          <span />
+          Description2
+        </p>
+        <div>
+          <button
+            className="reserve-btn"
+            onClick={[Function]}
+            type="button"
+          >
+            Reserve Rocket
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
