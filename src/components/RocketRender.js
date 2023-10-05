@@ -52,8 +52,12 @@ const RocketRender = ({ rocket }) => {
   );
 };
 
+RocketRender.defaultProps = {
+  rocket: null,
+};
+
 RocketRender.propTypes = {
-  rocket: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  rocket: PropTypes.oneOfType([PropTypes.object]),
 };
 
 export default RocketRender;
