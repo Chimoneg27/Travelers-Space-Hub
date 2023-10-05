@@ -53,13 +53,6 @@ const RocketRender = ({ rocket }) => {
 };
 
 RocketRender.propTypes = {
-  // rocket: PropTypes.shape({
-  //   id: PropTypes.string.isRequired,
-  //   flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  //   name: PropTypes.string.isRequired,
-  //   description: PropTypes.string.isRequired,
-  //   reserved: PropTypes.bool.isRequired,
-  // }).isRequired,
   rocket: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
 

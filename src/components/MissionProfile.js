@@ -2,9 +2,7 @@ import { useSelector } from 'react-redux';
 
 const MissionProfile = () => {
   const { missions } = useSelector((state) => state.missions);
-  console.log(missions);
   const missionsJoin = missions.filter((mission) => mission.mission_join === true);
-  console.log(missionsJoin);
   return (
     <>
       {
