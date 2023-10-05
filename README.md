@@ -65,7 +65,7 @@
 <!-- LIVE DEMO -->
 
  ## 🚀 Live Demo <a name="live-demo"></a>
-- Space Travelers Hub (https://space-travelers-hub-bvt6.onrender.com)
+- [Space Travelers Hub](https://space-travelers-hub-bvt6.onrender.com)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p> 
