@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Open+Sans&family=Roboto&display=swap');
+
 .mission-page {
   display: flex;
   align-items: center;
@@ -8,6 +10,7 @@
   width: 95%;
   border-collapse: collapse;
   text-align: left;
+  font-family: 'Roboto', sans-serif;
 }
 
 .missionTable,

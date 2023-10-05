@@ -81,9 +81,10 @@
 }
 
 .my-profile-page {
+  font-family: 'Inter', sans-serif;
   display: flex;
   width: 95%;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 2rem;
 }
